@@ -4,8 +4,8 @@ using UnityEngine;
 public class SimulateManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float secondsPerIteration = 1.0f;
-    private float time = 0f;
+    public float secondsPerIteration = 0.05f;
+    private float time = 0.05f;
 
     [Header("Entidades")]
     public List<Pokemons> pokemones = new List<Pokemons>();
@@ -14,6 +14,14 @@ public class SimulateManager : MonoBehaviour
 
     void Start()
     {
+
+        // Evita que los objetos caigan por gravedad
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.gravityScale = 0; // No queremos que caigan
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
         // Buscar todas las entidades en la escena
         Pokemons[] foundPokemones = FindObjectsByType<Pokemons>(FindObjectsSortMode.InstanceID);
         pokemones = new List<Pokemons>(foundPokemones);
@@ -60,7 +68,5 @@ public class SimulateManager : MonoBehaviour
             if (e != null)
                 e.Simulate(secondsPerIteration);
         }
-
-        Debug.Log(">>> Iteración de simulación completada <<<");
     }
 }

@@ -3,33 +3,33 @@ using UnityEngine;
 public class HierbaAlta : MonoBehaviour
 {
     public HierbaState currentState = HierbaState.Tranquila;
+    [Header("Zona de hierba")]
+    public float radioZona = 3f; // Radio donde los Pokémon pueden moverse
 
     public void Simulate(float deltaTime)
     {
         switch (currentState)
         {
             case HierbaState.Tranquila:
-                EsperarEncuentro();
+                if (Random.value < 0.02f)
+                    currentState = HierbaState.Encuentro;
                 break;
 
             case HierbaState.Encuentro:
-                GenerarEncuentro();
+                currentState = HierbaState.Tranquila;
                 break;
         }
+
+        // Pequeño efecto visual (mecerse)
+        float scale = 1 + Mathf.Sin(Time.time * 4f) * 0.05f;
+        transform.localScale = new Vector3(scale, scale, 1);
     }
 
-    void EsperarEncuentro()
+    private void OnDrawGizmosSelected()
     {
-        // Simula probabilidad de aparición de Pokémon
-        if (Random.value < 0.03f)
-        {
-            currentState = HierbaState.Encuentro;
-        }
-    }
-
-    void GenerarEncuentro()
-    {
-        Debug.Log("¡Un Pokémon salvaje ha aparecido!");
-        currentState = HierbaState.Tranquila;
+        Gizmos.color = new Color(0f, 1f, 0f, 0.2f);
+        Gizmos.DrawSphere(transform.position, radioZona);
     }
 }
+
+

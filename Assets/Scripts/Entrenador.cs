@@ -1,74 +1,131 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Entrenador : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [Header("Estado del Entrenador")]
     public EntrenadorState currentState = EntrenadorState.Explorando;
+
+    public float speed = 2.5f;
+    public float maxX = 9f;
+    public float maxY = 5f;
+
+    private Vector3 destination;
+    private float timer;
+    private bool enCombate = false;
+
+    void Start()
+    {
+        SelectNewDestination();
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.gravityScale = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
 
     public void Simulate(float deltaTime)
     {
-        switch (currentState)
+        if (enCombate) return;
+
+        timer += deltaTime;
+        if (timer >= 2f)
         {
-            case EntrenadorState.Explorando:
-                Explorar();
-                break;
+            SelectNewDestination();
+            timer = 0f;
+        }
 
-            case EntrenadorState.BuscarPokemon:
-                BuscarPokemon();
-                break;
+        MoveSmooth(deltaTime);
+        CheckBounds();
+        UpdateColor();
+    }
 
-            case EntrenadorState.Capturando:
-                Capturar();
-                break;
+    void MoveSmooth(float deltaTime)
+    {
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            destination,
+            speed * deltaTime
+        );
 
-            case EntrenadorState.Derrotado:
-                Descansar();
-                break;
+        if (Vector3.Distance(transform.position, destination) < 0.1f)
+        {
+            SelectNewDestination();
         }
     }
 
-    void Explorar()
+    void SelectNewDestination()
     {
-        // Chance de encontrar hierba o Pokémon
-        if (Random.value < 0.05f)
-        {
-            currentState = EntrenadorState.BuscarPokemon;
-        }
+        Vector3 direction = new Vector3(
+            Random.Range(-1f, 1f),
+            Random.Range(-1f, 1f),
+            0
+        ).normalized;
+
+        destination = transform.position + direction * Random.Range(2f, 4f);
     }
 
-    void BuscarPokemon()
+    void CheckBounds()
     {
-        // Simula búsqueda de Pokémon
-        if (Random.value < 0.4f)
+        Vector3 pos = transform.position;
+
+        if (pos.x > maxX || pos.x < -maxX)
         {
-            currentState = EntrenadorState.Capturando;
+            pos.x = Mathf.Clamp(pos.x, -maxX, maxX);
+            SelectNewDestination();
         }
-        else
+
+        if (pos.y > maxY || pos.y < -maxY)
         {
-            currentState = EntrenadorState.Explorando;
+            pos.y = Mathf.Clamp(pos.y, -maxY, maxY);
+            SelectNewDestination();
         }
+
+        transform.position = pos;
     }
 
-    void Capturar()
+    public void EntrarCombate(Pokemons pokemon)
     {
-        // Éxito o derrota
+        enCombate = true;
+        currentState = EntrenadorState.EnCombate;
+        Debug.Log($"âš”ï¸ El entrenador {name} ha entrado en combate con {pokemon.name}.");
+
         float resultado = Random.value;
 
-        if (resultado < 0.6f)
+        if (resultado < 0.5f)
         {
-            Debug.Log($"{name} capturó un Pokémon!");
-            currentState = EntrenadorState.Explorando;
+            Debug.Log($"ðŸŽ¯ Â¡Has capturado a {pokemon.name}!");
+            pokemon.ResultadoCombate(fueCapturado: true, derrotoEntrenador: false, huyo: false);
+        }
+        else if (resultado < 0.8f)
+        {
+            Debug.Log($"ðŸ’¨ El PokÃ©mon {pokemon.name} escapÃ³ del combate.");
+            pokemon.ResultadoCombate(fueCapturado: false, derrotoEntrenador: false, huyo: true);
         }
         else
         {
-            currentState = EntrenadorState.Derrotado;
+            Debug.Log($"âŒ El entrenador {name} ha sido derrotado por {pokemon.name}.");
+            pokemon.ResultadoCombate(fueCapturado: false, derrotoEntrenador: true, huyo: false);
         }
-    }
 
-    void Descansar()
-    {
-        // Tras descansar, vuelve a explorar
+        enCombate = false;
         currentState = EntrenadorState.Explorando;
     }
+
+    void UpdateColor()
+    {
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr == null) return;
+
+        switch (currentState)
+        {
+            case EntrenadorState.Explorando: sr.color = Color.blue; break;
+            case EntrenadorState.EnCombate: sr.color = Color.red; break;
+        }
+    }
 }
+
+
+
+
+
