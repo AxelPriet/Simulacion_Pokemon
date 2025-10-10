@@ -4,8 +4,8 @@ using UnityEngine;
 public class SimulateManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float secondsPerIteration = 0.05f;
-    private float time = 0.05f;
+    public float secondsPerIteration = 0.01f;
+    private float time = 1f;
 
     [Header("Entidades")]
     public List<Pokemons> pokemones = new List<Pokemons>();
@@ -15,11 +15,11 @@ public class SimulateManager : MonoBehaviour
     void Start()
     {
 
-        // Evita que los objetos caigan por gravedad
+        // Evita que los objetos caigan debido a los coliders asignados 
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.gravityScale = 0; // No queremos que caigan
+            rb.gravityScale = 0; 
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         // Buscar todas las entidades en la escena
@@ -48,21 +48,21 @@ public class SimulateManager : MonoBehaviour
 
     void Simulate()
     {
-        // --- Hierba alta ---
+        // Hierba alta 
         foreach (HierbaAlta hierba in zonasHierba)
         {
             if (hierba != null)
                 hierba.Simulate(secondsPerIteration);
         }
 
-        // --- Pokémon salvajes ---
+        //Pokémon salvajes
         foreach (Pokemons p in pokemones)
         {
             if (p != null)
                 p.Simulate(secondsPerIteration);
         }
 
-        // --- Entrenadores ---
+        //Entrenadores
         foreach (Entrenador e in entrenadores)
         {
             if (e != null)

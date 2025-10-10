@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Entrenador : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Entrenador : MonoBehaviour
 
     private Vector3 destination;
     private float timer;
-    private bool enCombate = false;
+    private bool enCombate = false; 
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class Entrenador : MonoBehaviour
 
     public void Simulate(float deltaTime)
     {
-        if (enCombate) return;
+        if (enCombate) return; // No se mueve mientras esta en combate
 
         timer += deltaTime;
         if (timer >= 2f)
@@ -84,34 +85,74 @@ public class Entrenador : MonoBehaviour
         transform.position = pos;
     }
 
+    // Este método es llamado desde el Pokémon cuando ocurre una colisión
     public void EntrarCombate(Pokemons pokemon)
     {
+        // No puede entrar en mas combates si ya está en uno
+        if (enCombate)
+        {
+            Debug.Log("El entrenador ya está en combate.");
+            return;
+        }
+
         enCombate = true;
         currentState = EntrenadorState.EnCombate;
-        Debug.Log($"⚔️ El entrenador {name} ha entrado en combate con {pokemon.name}.");
+
+        Debug.Log("Un Pokémon te ha cortado el paso.");
+        StartCoroutine(CombateConRetraso(pokemon));
+    }
+
+    private IEnumerator CombateConRetraso(Pokemons pokemon)
+    {
+        Debug.Log("El combate está en curso...");
+
+        // Animaciones de parpadeo en pokemon y entrenador
+        StartCoroutine(ParpadearDuranteCombate(5f));
+        StartCoroutine(pokemon.ParpadearDuranteCombate(5f));
+
+        // Tiempo de combate 5 segundos antes de obtener un resultado
+        yield return new WaitForSeconds(5f);
 
         float resultado = Random.value;
 
         if (resultado < 0.5f)
         {
-            Debug.Log($"🎯 ¡Has capturado a {pokemon.name}!");
+            Debug.Log("Has capturado al Pokémon");
             pokemon.ResultadoCombate(fueCapturado: true, derrotoEntrenador: false, huyo: false);
         }
         else if (resultado < 0.8f)
         {
-            Debug.Log($"💨 El Pokémon {pokemon.name} escapó del combate.");
+            Debug.Log("El Pokémon ha escapado.");
             pokemon.ResultadoCombate(fueCapturado: false, derrotoEntrenador: false, huyo: true);
         }
         else
         {
-            Debug.Log($"❌ El entrenador {name} ha sido derrotado por {pokemon.name}.");
+            Debug.Log("El entrenador ha sido derrotado por el Pokémon salvaje.");
             pokemon.ResultadoCombate(fueCapturado: false, derrotoEntrenador: true, huyo: false);
         }
 
+        // Una vez termina el combate, vuelve a explorar
         enCombate = false;
         currentState = EntrenadorState.Explorando;
     }
 
+    private IEnumerator ParpadearDuranteCombate(float duracion)
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr == null) yield break;
+
+        float tiempo = 0f;
+        while (tiempo < duracion)
+        {
+            sr.color = Color.white;
+            yield return new WaitForSeconds(0.2f);
+            sr.color = Color.blue;
+            yield return new WaitForSeconds(0.2f);
+            tiempo += 0.4f;
+        }
+
+        sr.color = Color.blue; //  vuelve al color base
+    }
     void UpdateColor()
     {
         var sr = GetComponent<SpriteRenderer>();
@@ -119,11 +160,18 @@ public class Entrenador : MonoBehaviour
 
         switch (currentState)
         {
-            case EntrenadorState.Explorando: sr.color = Color.blue; break;
-            case EntrenadorState.EnCombate: sr.color = Color.red; break;
+            case EntrenadorState.EnCombate:
+                sr.color = Color.red;
+                break;
+            case EntrenadorState.Explorando:
+                sr.color = Color.blue;
+                break;
         }
     }
 }
+
+
+
 
 
 

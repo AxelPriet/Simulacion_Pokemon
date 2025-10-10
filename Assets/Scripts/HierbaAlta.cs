@@ -4,7 +4,7 @@ public class HierbaAlta : MonoBehaviour
 {
     public HierbaState currentState = HierbaState.Tranquila;
     [Header("Zona de hierba")]
-    public float radioZona = 3f; // Radio donde los Pokémon pueden moverse
+    public float radioZona = 3f; // Radio de movimiento para el pokemon
 
     public void Simulate(float deltaTime)
     {

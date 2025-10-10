@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Pokemons : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Pokemons : MonoBehaviour
 
     void Start()
     {
-        // Buscar la zona de hierba más cercana
+        // Se asegura de que los pokemon esten o busquen hierba alta para estar y moverse
         HierbaAlta[] zonas = FindObjectsByType<HierbaAlta>(FindObjectsSortMode.None);
         float minDist = Mathf.Infinity;
 
@@ -31,7 +32,7 @@ public class Pokemons : MonoBehaviour
 
         if (zonaAsignada == null)
         {
-            Debug.LogWarning($"{name} no encontró una zona de hierba cercana.");
+            Debug.LogWarning("El pokemon no encontró una zona de hierba cercana.");
         }
 
         SelectNewDestination();
@@ -46,7 +47,7 @@ public class Pokemons : MonoBehaviour
 
     public void Simulate(float deltaTime)
     {
-        if (enCombate) return; // No se mueve mientras está peleando
+        if (enCombate) return; // Se mantendra quieto si entra en combate
 
         timer += deltaTime;
         if (timer >= changeDirTime)
@@ -86,14 +87,24 @@ public class Pokemons : MonoBehaviour
 
     void UpdateColor()
     {
+        // Verifica que los prefabas de pokemons ya no existan
+        if (this == null || gameObject == null) return;
+
+        //Actualiza el color del pokemon segun el estado actual
         var sr = GetComponent<SpriteRenderer>();
         if (sr == null) return;
 
         switch (currentState)
         {
-            case PokemonsState.Explorando: sr.color = Color.green; break;
-            case PokemonsState.Peleando: sr.color = Color.red; break;
-            case PokemonsState.Huyendo: sr.color = Color.yellow; break;
+            case PokemonsState.Peleando:
+                sr.color = Color.red;
+                break;
+            case PokemonsState.Huyendo:
+                sr.color = Color.yellow;
+                break;
+            case PokemonsState.Explorando:
+                sr.color = Color.green;
+                break;
         }
     }
 
@@ -102,9 +113,7 @@ public class Pokemons : MonoBehaviour
         Entrenador entrenador = collision.gameObject.GetComponent<Entrenador>();
         if (entrenador != null && !enCombate)
         {
-            // 🔥 Solo cuando colisiona se anuncia el encuentro
-            Debug.Log($"🌿 ¡Un Pokémon salvaje ha aparecido en la hierba alta! ({name})");
-
+            Debug.Log("Un Pokémon salvaje te corta el paso");
             enCombate = true;
             currentState = PokemonsState.Peleando;
             entrenador.EntrarCombate(this);
@@ -117,20 +126,45 @@ public class Pokemons : MonoBehaviour
 
         if (fueCapturado)
         {
-            Debug.Log($"✅ ¡Has capturado al Pokémon {name}!");
+            Debug.Log("El pokemon ha sido capturado por el entrenado");
+            StopAllCoroutines(); // Se asegura de que no se ejecuten co-rutinas tras ser capturados
             Destroy(gameObject);
+            return;
         }
-        else if (derrotoEntrenador)
+
+        if (derrotoEntrenador)
         {
-            Debug.Log($"🔥 El Pokémon {name} ha derrotado al entrenador.");
+            Debug.Log("El Pokémon ha derrotado al entrenador.");
             currentState = PokemonsState.Explorando;
         }
         else if (huyo)
         {
-            Debug.Log($"💨 El Pokémon {name} ha escapado.");
+            Debug.Log("El Pokémon ha escapado.");
             currentState = PokemonsState.Explorando;
         }
     }
+
+    public IEnumerator ParpadearDuranteCombate(float duracion)
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr == null) yield break;
+
+        float tiempo = 0f;
+        while (tiempo < duracion)
+        {
+            if (sr == null) yield break; // Evita error si el cuando se captura el pokemon
+            sr.color = Color.white;
+            yield return new WaitForSeconds(0.2f);
+            if (sr == null) yield break;
+            sr.color = Color.red;
+            yield return new WaitForSeconds(0.2f);
+            tiempo += 0.4f;
+        }
+    }
 }
+
+
+
+
 
 

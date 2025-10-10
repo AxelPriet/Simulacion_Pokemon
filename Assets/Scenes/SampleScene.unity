@@ -853,7 +853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
-  radioZona: 4
+  radioZona: 1.07
 --- !u!1 &1867243128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35115dd3b1a3564596c7dfba00dac8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimulateManager
-  secondsPerIteration: 1
+  secondsPerIteration: 0.01
   pokemones: []
   entrenadores: []
   zonasHierba: []
@@ -1222,11 +1222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 26018964116743488, guid: 822410a5251b2f2428b49651e7d0c696, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.02
+      value: -7.49
       objectReference: {fileID: 0}
     - target: {fileID: 26018964116743488, guid: 822410a5251b2f2428b49651e7d0c696, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.06
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 26018964116743488, guid: 822410a5251b2f2428b49651e7d0c696, type: 3}
       propertyPath: m_LocalPosition.z
