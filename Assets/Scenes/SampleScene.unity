@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296816768424948063, guid: 297b9448a710751438a89559911e27f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.13
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 4296816768424948063, guid: 297b9448a710751438a89559911e27f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -202,6 +202,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 57092317}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 57092318}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &57092316 stripped
 GameObject:
@@ -221,6 +224,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &57092318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57092316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &160630951
 PrefabInstance:
@@ -305,6 +323,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 160630953}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 160630954}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &160630952 stripped
 GameObject:
@@ -324,6 +345,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &160630954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160630952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &236476491
 PrefabInstance:
@@ -408,6 +444,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 236476493}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 236476494}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &236476492 stripped
 GameObject:
@@ -428,167 +467,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
   radioZona: 1.07
---- !u!1001 &280915449
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_Name
-      value: Pokemon (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 280915453}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 280915452}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 280915451}
-  m_SourcePrefab: {fileID: 100100000, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
---- !u!1 &280915450 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-  m_PrefabInstance: {fileID: 280915449}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &280915451
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280915450}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &280915452
+--- !u!114 &236476494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280915450}
+  m_GameObject: {fileID: 236476492}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140ec44ff82891245bbf3b1208d78009, type: 3}
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pokemons
-  currentState: 0
-  speed: 2
-  changeDirTime: 2
---- !u!58 &280915453
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280915450}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.01, y: 0.25}
-  m_Radius: 2
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
+  radioZona: 1.07
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,6 +702,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 528233478}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 528233479}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &528233477 stripped
 GameObject:
@@ -829,167 +725,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
   radioZona: 1.07
---- !u!1001 &594791374
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_Name
-      value: Pokemon (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 594791378}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 594791377}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 594791376}
-  m_SourcePrefab: {fileID: 100100000, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
---- !u!1 &594791375 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-  m_PrefabInstance: {fileID: 594791374}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &594791376
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594791375}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &594791377
+--- !u!114 &528233479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594791375}
+  m_GameObject: {fileID: 528233477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140ec44ff82891245bbf3b1208d78009, type: 3}
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pokemons
-  currentState: 0
-  speed: 2
-  changeDirTime: 2
---- !u!58 &594791378
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594791375}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.01, y: 0.25}
-  m_Radius: 2
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
+  radioZona: 1.07
 --- !u!1001 &601564280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1073,6 +823,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 601564282}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 601564283}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &601564281 stripped
 GameObject:
@@ -1092,6 +845,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &601564283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601564281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1 &619394800
 GameObject:
@@ -1260,6 +1028,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 648226730}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 648226731}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &648226729 stripped
 GameObject:
@@ -1279,6 +1050,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &648226731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648226729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &828751170
 PrefabInstance:
@@ -1363,6 +1149,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 828751172}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 828751173}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &828751171 stripped
 GameObject:
@@ -1382,6 +1171,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &828751173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828751171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &870309451
 PrefabInstance:
@@ -1466,6 +1270,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 870309453}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 870309454}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &870309452 stripped
 GameObject:
@@ -1485,6 +1292,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &870309454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870309452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &872648672
 PrefabInstance:
@@ -1569,6 +1391,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 872648674}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 872648675}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &872648673 stripped
 GameObject:
@@ -1588,6 +1413,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &872648675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872648673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &957888209
 PrefabInstance:
@@ -1672,6 +1512,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 957888211}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 957888212}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &957888210 stripped
 GameObject:
@@ -1691,6 +1534,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &957888212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957888210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1155559271
 PrefabInstance:
@@ -1775,6 +1633,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1155559273}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1155559274}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1155559272 stripped
 GameObject:
@@ -1794,6 +1655,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1155559274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155559272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1239274668
 PrefabInstance:
@@ -1817,7 +1693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296816768424948063, guid: 297b9448a710751438a89559911e27f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.13
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 4296816768424948063, guid: 297b9448a710751438a89559911e27f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1878,6 +1754,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1239274670}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1239274671}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1239274669 stripped
 GameObject:
@@ -1897,6 +1776,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1239274671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239274669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1258936133
 PrefabInstance:
@@ -1981,6 +1875,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1258936135}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1258936136}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1258936134 stripped
 GameObject:
@@ -2000,6 +1897,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1258936136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258936134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1428656492
 PrefabInstance:
@@ -2084,6 +1996,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1428656494}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1428656495}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1428656493 stripped
 GameObject:
@@ -2103,6 +2018,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1428656495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428656493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1484907688
 PrefabInstance:
@@ -2187,6 +2117,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1484907690}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1484907691}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1484907689 stripped
 GameObject:
@@ -2206,6 +2139,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1484907691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484907689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1605374549
 PrefabInstance:
@@ -2290,6 +2238,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1605374551}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1605374552}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1605374550 stripped
 GameObject:
@@ -2309,6 +2260,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1605374552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605374550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1624595691
 PrefabInstance:
@@ -2332,7 +2298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296816768424948063, guid: 297b9448a710751438a89559911e27f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.13
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 4296816768424948063, guid: 297b9448a710751438a89559911e27f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2393,6 +2359,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1624595693}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1624595694}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1624595692 stripped
 GameObject:
@@ -2412,6 +2381,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1624595694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624595692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &1698688214
 PrefabInstance:
@@ -2496,6 +2480,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1698688216}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1698688217}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1698688215 stripped
 GameObject:
@@ -2516,167 +2503,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
   radioZona: 1.07
---- !u!1001 &1823052712
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.31
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_Name
-      value: Pokemon (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1823052716}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1823052715}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1823052714}
-  m_SourcePrefab: {fileID: 100100000, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
---- !u!1 &1823052713 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-  m_PrefabInstance: {fileID: 1823052712}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1823052714
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823052713}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1823052715
+--- !u!114 &1698688217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823052713}
+  m_GameObject: {fileID: 1698688215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140ec44ff82891245bbf3b1208d78009, type: 3}
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pokemons
-  currentState: 0
-  speed: 2
-  changeDirTime: 2
---- !u!58 &1823052716
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1823052713}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.01, y: 0.25}
-  m_Radius: 2
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
+  radioZona: 1.07
 --- !u!1001 &1948786703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2760,6 +2601,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1948786705}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1948786706}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1948786704 stripped
 GameObject:
@@ -2779,6 +2623,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1948786706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948786704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1 &1950464143
 GameObject:
@@ -2810,6 +2669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimulateManager
   secondsPerIteration: 0.01
+  pokemonPrefab: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
   pokemones: []
   entrenadores: []
   zonasHierba: []
@@ -2911,6 +2771,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983477600}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1983477601}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &1983477599 stripped
 GameObject:
@@ -2930,6 +2793,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &1983477601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983477599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &2041364748
 PrefabInstance:
@@ -3014,6 +2892,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2041364750}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2041364751}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &2041364749 stripped
 GameObject:
@@ -3033,6 +2914,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &2041364751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041364749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &2046226146
 PrefabInstance:
@@ -3117,6 +3013,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2046226148}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2046226149}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &2046226147 stripped
 GameObject:
@@ -3136,6 +3035,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &2046226149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046226147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &2093002176
 PrefabInstance:
@@ -3220,6 +3134,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2093002178}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2093002179}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &2093002177 stripped
 GameObject:
@@ -3239,6 +3156,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
+  radioZona: 1.07
+--- !u!114 &2093002179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093002177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
   radioZona: 1.07
 --- !u!1001 &2104719527
 PrefabInstance:
@@ -3323,6 +3255,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2104719529}
+    - targetCorrespondingSourceObject: {fileID: 7887371620042585992, guid: 297b9448a710751438a89559911e27f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104719530}
   m_SourcePrefab: {fileID: 100100000, guid: 297b9448a710751438a89559911e27f0, type: 3}
 --- !u!1 &2104719528 stripped
 GameObject:
@@ -3343,328 +3278,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HierbaAlta
   currentState: 0
   radioZona: 1.07
---- !u!1001 &2119368609
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_Name
-      value: Pokemon (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2119368613}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2119368612}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2119368611}
-  m_SourcePrefab: {fileID: 100100000, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
---- !u!1 &2119368610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-  m_PrefabInstance: {fileID: 2119368609}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &2119368611
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119368610}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &2119368612
+--- !u!114 &2104719530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119368610}
+  m_GameObject: {fileID: 2104719528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140ec44ff82891245bbf3b1208d78009, type: 3}
+  m_Script: {fileID: 11500000, guid: 28ba3d2e2815f674184951055b170ab8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pokemons
-  currentState: 0
-  speed: 2
-  changeDirTime: 2
---- !u!58 &2119368613
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119368610}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.01, y: 0.25}
-  m_Radius: 2
---- !u!1001 &1461024861749664496
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3159
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823103426887403123, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      propertyPath: m_Name
-      value: Pokemon
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1461024861749664499}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1461024861749664498}
-    - targetCorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1461024861749664502}
-  m_SourcePrefab: {fileID: 100100000, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
---- !u!1 &1461024861749664497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
-  m_PrefabInstance: {fileID: 1461024861749664496}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1461024861749664498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461024861749664497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140ec44ff82891245bbf3b1208d78009, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pokemons
-  currentState: 0
-  speed: 2
-  changeDirTime: 2
---- !u!58 &1461024861749664499
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461024861749664497}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.01, y: 0.25}
-  m_Radius: 2
---- !u!50 &1461024861749664502
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461024861749664497}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_EditorClassIdentifier: Assembly-CSharp::PokemonsSpawner
+  prefabPokemon: {fileID: 4788631574324751227, guid: 6b2b94f9fd34580498cf880c620e47e0, type: 3}
+  cantidadInicial: 1
+  radioZona: 1.07
 --- !u!1001 &7806009006324761213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3866,9 +3494,4 @@ SceneRoots:
   - {fileID: 160630951}
   - {fileID: 1624595691}
   - {fileID: 57092315}
-  - {fileID: 1461024861749664496}
-  - {fileID: 594791374}
-  - {fileID: 2119368609}
-  - {fileID: 280915449}
-  - {fileID: 1823052712}
   - {fileID: 1950464145}

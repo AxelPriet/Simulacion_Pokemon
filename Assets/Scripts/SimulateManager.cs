@@ -1,11 +1,14 @@
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SimulateManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float secondsPerIteration = 0.01f;
-    private float time = 1f;
+    private float time = 0f;
+
+    [Header("Prefabs")]
+    public GameObject pokemonPrefab;
 
     [Header("Entidades")]
     public List<Pokemons> pokemones = new List<Pokemons>();
@@ -14,31 +17,39 @@ public class SimulateManager : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(IniciarSimulacion());
+    }
 
-        // Evita que los objetos caigan debido a los coliders asignados 
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (rb != null)
+    IEnumerator IniciarSimulacion()
+    {
+        yield return new WaitForSeconds(0.3f); // esperar a que cargue todo
+
+        // Encontrar zonas y entrenadores
+        zonasHierba = new List<HierbaAlta>(FindObjectsByType<HierbaAlta>(FindObjectsSortMode.None));
+        entrenadores = new List<Entrenador>(FindObjectsByType<Entrenador>(FindObjectsSortMode.None));
+
+        // Crear Pokémon aleatorio
+        foreach (var zona in zonasHierba)
         {
-            rb.gravityScale = 0; 
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            int cantidad = Random.Range(0, 1); // cuántos Pokémon aparecen por zona
+            for (int i = 0; i < cantidad; i++)
+            {
+                Vector2 offset = Random.insideUnitCircle * (zona.radioZona * 0.5f);
+                Vector3 pos = zona.transform.position + new Vector3(offset.x, offset.y, 0);
+                Instantiate(pokemonPrefab, pos, Quaternion.identity);
+            }
         }
-        // Buscar todas las entidades en la escena
-        Pokemons[] foundPokemones = FindObjectsByType<Pokemons>(FindObjectsSortMode.InstanceID);
-        pokemones = new List<Pokemons>(foundPokemones);
 
-        Entrenador[] foundEntrenadores = FindObjectsByType<Entrenador>(FindObjectsSortMode.InstanceID);
-        entrenadores = new List<Entrenador>(foundEntrenadores);
+        // Esperar un momento para que aparezcan y los detecte el manager
+        yield return new WaitForSeconds(0.2f);
+        ActualizarListas();
 
-        HierbaAlta[] foundHierbas = FindObjectsByType<HierbaAlta>(FindObjectsSortMode.InstanceID);
-        zonasHierba = new List<HierbaAlta>(foundHierbas);
-
-        Debug.Log($"Simulaci�n iniciada con {pokemones.Count} Pok�mon salvajes, {entrenadores.Count} entrenadores y {zonasHierba.Count} zonas de hierba.");
+        Debug.Log("Simulación iniciada con {pokemones.Count} Pokémon salvajes, {entrenadores.Count} entrenadores y {zonasHierba.Count} zonas de hierba.");
     }
 
     void Update()
     {
         time += Time.deltaTime;
-
         if (time >= secondsPerIteration)
         {
             time = 0f;
@@ -48,25 +59,23 @@ public class SimulateManager : MonoBehaviour
 
     void Simulate()
     {
-        // Hierba alta 
-        foreach (HierbaAlta hierba in zonasHierba)
-        {
-            if (hierba != null)
-                hierba.Simulate(secondsPerIteration);
-        }
+        ActualizarListas();
 
-        //Pok�mon salvajes
-        foreach (Pokemons p in pokemones)
-        {
-            if (p != null)
-                p.Simulate(secondsPerIteration);
-        }
+        foreach (var h in zonasHierba)
+            if (h != null) h.Simulate(secondsPerIteration);
 
-        //Entrenadores
-        foreach (Entrenador e in entrenadores)
-        {
-            if (e != null)
-                e.Simulate(secondsPerIteration);
-        }
+        foreach (var p in pokemones)
+            if (p != null) p.Simulate(secondsPerIteration);
+
+        foreach (var e in entrenadores)
+            if (e != null) e.Simulate(secondsPerIteration);
+    }
+
+    void ActualizarListas()
+    {
+        pokemones = new List<Pokemons>(FindObjectsByType<Pokemons>(FindObjectsSortMode.None));
     }
 }
+
+
+
